@@ -229,7 +229,7 @@ watch(selectedTimeRange, (newTimeRange) => {
         fetchDataForTimeRange(newTimeRange);
     }
     timeRangeWatcherEnabled = false;
-},{ flush: 'sync' });
+}, { flush: 'sync' });
 
 const exportChartToCSV = () => {
     // Get the data from the chart instance
@@ -281,7 +281,7 @@ function getRandomColor() {
     <div class="w-full bg-[#1E1E1E] rounded-lg shadow-lg">
         <!-- Header -->
         <div class="flex justify-between items-center my-4">
-            <h2 class="text-lg font-semibold text-white">Behavioral Summary Chart : {{ sensorName }}</h2>
+            <h2 class="text-lg font-semibold text-white">Pricing Chart : {{ sensorName }}</h2>
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-1 text-sm text-gray-400">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

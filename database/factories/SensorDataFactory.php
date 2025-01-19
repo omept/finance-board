@@ -19,7 +19,7 @@ class SensorDataFactory extends Factory
     {
         return [
             'sensor_id' => Sensor::inRandomOrder()->first(),
-            'value' => random_int(0, 100),
+            'value' => random_int(1600, 1900),
             'source' => fake()->randomElement(['google', 'luno', 'yahoo']),
             'channel' => 'farm',
             'recorded_at' => now()->subMinutes(random_int(1, 3600))

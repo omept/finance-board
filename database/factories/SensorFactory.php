@@ -21,7 +21,7 @@ class SensorFactory extends Factory
         return [
             'device_id' => Device::inRandomOrder()->first(),
             'type' => '',
-            'name' =>  fake()->randomElement(['USD', 'NGN', 'EUR', 'BTC', 'USDT', 'ETH', 'XRP'])
+            'name' =>  fake()->randomElement(['BTC', 'USDT', 'ETH', 'XRP'])
         ];
     }
 }

@@ -27,19 +27,19 @@ class SensorDataSimulator extends Command
      */
     public function handle()
     {
-        while(1){
+        while (1) {
             $sensor = Sensor::inRandomOrder()->first();
-            $data = random_int(0, 100);
+            $data = random_int(1600, 1900);
             $sensorData = SensorData::create(
                 [
                     'sensor_id' => $sensor->id,
-                    'channel' => 'farm/moisture',
-                    'source' => ['mqtt','http'][random_int(0,1)],
+                    'channel' => 'farm',
+                    'source' =>  fake()->randomElement(['google', 'luno', 'yahoo']),
                     'value' => $data,
                 ]
             );
-            echo 'sensor: '.$sensor->id. ' data: '. $data . PHP_EOL;
-            usleep(100 * 1000); // 100milliseconds
+            echo 'sensor: ' . $sensor->id . ' data: ' . $data . PHP_EOL;
+            usleep(2000 * 1000); // 2 seconds
         }
     }
 }
